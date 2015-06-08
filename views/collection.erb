@@ -1,0 +1,21 @@
+ <p>  Add more Topics  </p>
+<form method="post"  action="/addtopic">
+	<input type ="text" name="topicname" placeholder="Topic Name">
+<!-- 	<input type="hidden" name="userid">
+ -->	<input type="submit" value='add+'>
+</form>
+
+
+<ol> <%@topics.each do |topic|%>
+ 	<li>Topic name:<a href = "/commentsonthem" > <%= topic["topic_name"] %> created by  <%= topic["topiccreator"] %> </a> </li>
+
+<% end %>
+</ol>
+
+
+
+<a href="/dashboard"> home </a>
+
+
+
+

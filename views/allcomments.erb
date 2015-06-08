@@ -1,0 +1,11 @@
+
+
+<ol> <% @topics.each do |topic|%>
+ 	<li>Topic<a href = "/commentsonthem/new/" > <%=topic["topic_name"] %> </a> </li>
+
+<% end %>
+</ol>
+
+
+
+<a href="/dashboard"> home </a>

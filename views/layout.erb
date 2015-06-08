@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Travel Discussions</title>
+<link rel="stylesheet" href="/css/color.css">
+</head>
+
+
+<body>
+
+  <h1> Travel Discussions </h1>
+
+  <% if current_user %>
+    <form method="POST" action="/logout">
+      <!-- hit the DELETE route -->
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="Logout">
+    </form>
+
+  <% else %>
+
+<!--     <a href="/login">Login</a>
+ -->
+  <% end %>
+
+  <%= yield %>
+
+</body>
+</html>
